@@ -1,0 +1,41 @@
+<div class="container-fluid container-table col-sm-12" style="background:lightPink">
+	<div class="row vertical-center-row">
+		<div class="text-center col-md-10 col-md-offset-1" style="background:white">
+			<div class="row">
+				<h1 style="color:darkred"><strong>Demo 1</strong></h1>
+			</div>
+			<div class="row">
+				
+				<div class="col-md-6">
+					<div style="text-align:left">
+						<h3><small>Find Pharmacy</small></h3>
+					</div>
+					<select style="width:100%" ng-model='pharmacyIndex'>
+						<option ng-repeat="x in pharmacies track by $index" value="{{$index}}">{{x.organisation_name}}</option>
+					</select>
+					
+				</div>
+				
+				<div class="col-md-6">
+					
+					<div style="text-align:left">
+						<h3><small>Address:</small></h3>
+					</div>
+				
+					<div style="text-align:left">
+						<span>{{pharmacies[pharmacyIndex].address1}}</span><span ng-if="pharmacies[pharmacyIndex].address2">, {{pharmacies[pharmacyIndex].address2}}</span><span ng-if="pharmacies[pharmacyIndex].address3">, {{pharmacies[pharmacyIndex].address3}}</span><span ng-if="pharmacies[pharmacyIndex].city">, {{pharmacies[pharmacyIndex].city}}</span><span ng-if="pharmacies[pharmacyIndex].postcode">, {{pharmacies[pharmacyIndex].postcode}}</span>
+					</div>
+										
+				</div>
+				
+			</div>
+			<div class="row" style="height:2em">
+			</div>
+			<div class="row" style="height:4em">
+				
+						<button type="button" class="btn btn-default" style='background:red;color:white' ng-click="showView('mainPage.html')">BACK TO HOME PAGE</button>
+				
+			</div>
+		</div>
+	</div>
+</div>

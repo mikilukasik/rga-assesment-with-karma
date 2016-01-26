@@ -1,0 +1,20 @@
+html, body, .container-table {
+    height: 100%;
+    width: 100%;    
+}
+.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+html, 
+/*body {
+    height: 100%;
+}*/
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
